@@ -43,7 +43,7 @@ class App extends React.Component {
     this.setState({ sentiment: true });
 
     const mode = this.state.mode
-    const url = "http://localhost:8080/" + mode + "/sentiment?" + mode + "=" + document.getElementById("textinput").value;
+    const url = "." + mode + "/sentiment?" + mode + "=" + document.getElementById("textinput").value;
 
     fetch(url)
       .then(res => { return res.json(); })
@@ -67,7 +67,7 @@ class App extends React.Component {
     this.setState({ sentiment: false });
 
     const mode = this.state.mode;
-    const url = "http://localhost:8080/" + mode + "/emotion?" + mode + "=" + document.getElementById("textinput").value;
+    const url = "." + mode + "/emotion?" + mode + "=" + document.getElementById("textinput").value;
 
     console.log("URL: " + url);
     fetch(url)
